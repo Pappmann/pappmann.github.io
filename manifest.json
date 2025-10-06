@@ -1,0 +1,12 @@
+{
+  "name": "Pappmann",
+  "short_name": "Pappmann",
+  "description": "Open Source, Nachhaltigkeit & Bewusstsein",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#6aa77c",
+  "background_color": "#224d36",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
