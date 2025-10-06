@@ -1,0 +1,91 @@
+:root {
+  --green-light: #a7d5b4;
+  --green-dark: #224d36;
+  --text-light: #f5f5f5;
+  --text-dark: #222;
+  --transition: 0.4s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--green-dark);
+    color: var(--text-light);
+  }
+  a { color: var(--green-light); }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--green-light);
+    color: var(--text-dark);
+  }
+  a { color: var(--green-dark); }
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  border-color: currentColor;
+}
+
+.about {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
